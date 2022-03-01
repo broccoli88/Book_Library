@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Book Library</title>
+		<script src="book-library.js" defer></script>
+		<link rel="stylesheet" href="/css/normalize.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>My Book Library</h1>
+				<h2>KiAi Books</h2>
+				<form id="book-search">
+					<input type="text" placeholder="Serch library..." />
+				</form>
+			</header>
+			<main>
+				<div id="library">
+					<h2>Book List</h2>
+					<ul id="book-list">
+						<li>
+							<span class="title">Loki</span>
+							<button>remove</button>
+						</li>
+						<li>
+							<span class="title">Loki 2.0</span>
+							<button>remove</button>
+						</li>
+						<li>
+							<span class="title">Loki 3.0</span>
+							<button>remove</button>
+						</li>
+						<li>
+							<span class="title">Loki 4.0</span>
+							<button>remove</button>
+						</li>
+					</ul>
+				</div>
+				<div id="add-books">
+					<form>
+						<input type="text" placeholder="Add book" />
+						<button>Add</button>
+					</form>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
