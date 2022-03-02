@@ -24,28 +24,28 @@
 					<ul id="book-list">
 						<li>
 							<span class="title">Loki</span>
-							<button>remove</button>
+							<button class="remove">remove</button>
 						</li>
 						<li>
 							<span class="title">Loki 2.0</span>
-							<button>remove</button>
+							<button class="remove">remove</button>
 						</li>
 						<li>
 							<span class="title">Loki 3.0</span>
-							<button>remove</button>
+							<button class="remove">remove</button>
 						</li>
 						<li>
 							<span class="title">Loki 4.0</span>
-							<button>remove</button>
+							<button class="remove">remove</button>
 						</li>
 					</ul>
 				</div>
-				<div id="add-books">
-					<form>
-						<input type="text" placeholder="Add book" />
-						<button>Add</button>
-					</form>
-				</div>
+				<label for="hide-books"></label>
+				<input type="checkbox" id="hide-books" name="hide-books" />
+				<form id="add-books">
+					<input id="titleInput" type="text" placeholder="Add book" />
+					<button id="add-button">Add</button>
+				</form>
 			</main>
 		</div>
 	</body>

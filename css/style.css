@@ -46,16 +46,33 @@ body {
 }
 
 #book-list li {
+	padding: 0.3em 0 0.3em 0.5em;
+
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2rem;
+
+	position: relative;
 }
 
-#book-list li button,
-#add-books button {
-	width: 10em;
+#book-list li::before {
+	content: "";
 	display: inline-block;
+
+	background-color: white;
+
+	position: absolute;
+	width: 3px;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#book-list li button {
+	width: 10em;
+
 	padding: 0.2em 2em;
+	cursor: pointer;
 }
 
 .title {
@@ -65,14 +82,17 @@ body {
 
 #add-books {
 	margin-bottom: 4rem;
-}
-
-#add-books form {
 	display: flex;
 	justify-content: space-between;
 }
 
 #add-books input {
-	width: 80%;
+	width: 60%;
 	padding: 0.5em;
+}
+
+#add-button {
+	width: 10em;
+
+	cursor: pointer;
 }
