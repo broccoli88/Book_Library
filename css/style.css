@@ -1,3 +1,10 @@
+:root {
+	--color-deepPurple: #363237;
+	--color-Indigo: #081c3a;
+	--color-Taupe: #73605b;
+	--color-Blush: #d09683;
+}
+
 *,
 *::before,
 *::after {
@@ -14,70 +21,121 @@ body {
 	font-size: 1.6rem;
 	line-height: 1.5;
 	color: white;
+	font-family: "Rozha One", serif;
 
-	background-color: black;
+	background-image: url("../images/Library.jpg");
+	background-size: cover;
+	background-position: left top;
 
 	max-width: 100vw;
 	min-height: 100vh;
+
+	overflow-inline: hidden;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Cinzel Decorative", cursive;
+	text-shadow: 0 0 3px black;
+}
+
+h1 {
+	font-size: 8rem;
+}
+
+h2 {
+	font-size: 5rem;
+	font-weight: 500;
+	margin-bottom: 5rem;
 }
 
 /* ##################################TYPOGRAPHY################################# */
+
+header {
+	display: flex;
+	flex-direction: column;
+}
 
 #wrapper {
 	width: 60em;
 	margin: 0 auto;
 
 	padding: 0.5em 4em;
-
-	text-align: center;
-
-	border: 2px solid white;
 }
 
 #book-search > input {
 	width: 100%;
-
 	margin-top: 4rem;
+}
+
+.input--style {
+	opacity: 0.8;
 	padding: 0.5em;
+
+	border-radius: 5px;
+	border: 0;
+	box-shadow: inset 0 0 8px 0 black;
 }
 
 #library {
 	margin: 8rem auto;
 }
 
-#book-list li {
-	padding: 0.3em 0 0.3em 0.5em;
+.book {
+	padding: 0.7em 0.8em;
 
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2rem;
 
 	position: relative;
+	z-index: 1;
 }
 
-#book-list li::before {
-	content: "";
-	display: inline-block;
-
-	background-color: white;
-
-	position: absolute;
-	width: 3px;
-	height: 100%;
-	top: 0;
-	left: 0;
+.book--style {
+	border-radius: 20px;
+	background-color: hsla(35, 50%, 60%, 0.4);
+	color: white;
+	border-left: 15px solid var(--color-deepPurple);
+	box-shadow: 0 0 0 2px var(--color-Indigo), 1px 1px 3px 0 white;
+	transform: perspective(0) translateY(0);
 }
 
-#book-list li button {
-	width: 10em;
+.book:hover {
+	background-color: hsla(35, 50%, 60%, 0.8);
+	transform: translateY(-0.5rem);
+	border-color: #081c3a;
+	z-index: 10;
+}
 
-	padding: 0.2em 2em;
+.book:hover::after {
+	border-radius: 20px;
+	opacity: 1;
+}
+
+.button--style {
 	cursor: pointer;
+	width: 16rem;
+	background-color: transparent;
+	padding: 0.5rem 3.2rem;
+	border: 0;
+	border-radius: 10px;
+	text-transform: uppercase;
+	color: rgb(175, 170, 170);
+	font-weight: 600;
+	text-shadow: 0 2px 2px black;
+}
+
+.button--style:hover,
+.button--style:focus {
+	color: white;
+	font-size: 1.7rem;
 }
 
 .title {
-	font-size: 2rem;
-	padding: 0.3em 2em;
+	font-size: 2.2rem;
+	padding: 0.5rem 2rem;
 }
 
 #add-books {
@@ -87,12 +145,11 @@ body {
 }
 
 #add-books input {
-	width: 60%;
+	width: 70%;
 	padding: 0.5em;
 }
 
 #add-button {
-	width: 10em;
-
-	cursor: pointer;
+	margin-right: 1.2rem;
+	background-color: hsla(35, 50%, 60%, 0.4);
 }

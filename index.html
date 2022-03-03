@@ -6,6 +6,12 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Book Library</title>
 		<script src="book-library.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rozha+One&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="/css/normalize.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 	</head>
@@ -15,36 +21,45 @@
 				<h1>My Book Library</h1>
 				<h2>KiAi Books</h2>
 				<form id="book-search">
-					<input type="text" placeholder="Serch library..." />
+					<input
+						type="text"
+						class="input--style"
+						placeholder="Serch library..."
+					/>
 				</form>
 			</header>
 			<main>
 				<div id="library">
 					<h2>Book List</h2>
 					<ul id="book-list">
-						<li>
+						<li class="book book--style">
 							<span class="title">Loki</span>
-							<button class="remove">remove</button>
+							<button class="remove button--style">remove</button>
 						</li>
-						<li>
+						<li class="book book--style">
 							<span class="title">Loki 2.0</span>
-							<button class="remove">remove</button>
+							<button class="remove button--style">remove</button>
 						</li>
-						<li>
+						<li class="book book--style">
 							<span class="title">Loki 3.0</span>
-							<button class="remove">remove</button>
+							<button class="remove button--style">remove</button>
 						</li>
-						<li>
+						<li class="book book--style">
 							<span class="title">Loki 4.0</span>
-							<button class="remove">remove</button>
+							<button class="remove button--style">remove</button>
 						</li>
 					</ul>
 				</div>
-				<label for="hide-books"></label>
 				<input type="checkbox" id="hide-books" name="hide-books" />
+				<label for="hide-books">Hide Books</label>
 				<form id="add-books">
-					<input id="titleInput" type="text" placeholder="Add book" />
-					<button id="add-button">Add</button>
+					<input
+						id="titleInput"
+						class="input--style"
+						type="text"
+						placeholder="Add book"
+					/>
+					<button class="button--style" id="add-button">Add</button>
 				</form>
 			</main>
 		</div>

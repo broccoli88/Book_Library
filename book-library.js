@@ -5,7 +5,7 @@ function removeBook() {
     const bookList = document.querySelector('#book-list');
 
     bookList.addEventListener('click', (e) => {
-        if (e.target.className == 'remove') {
+        if (e.target.className == 'remove button--style') {
             const li = e.target.parentElement
             bookList.removeChild(li)
         }
@@ -41,8 +41,11 @@ function addBook() {
 
         // ADDING CLASSES
 
+        li.classList.add('book')
+        li.classList.add('book--style')
         span.classList.add('title')
         button.classList.add('remove')
+        button.classList.add('button--style')
 
 
         // CONTENT
@@ -94,3 +97,4 @@ searchBar()
 
 
 // HIDE BOOKS
+
