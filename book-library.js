@@ -98,3 +98,20 @@ searchBar()
 
 // HIDE BOOKS
 
+function hideBooks() {
+    const hideBooks = document.querySelector('#hide-books');
+
+    console.log(hideBooks);
+
+    hideBooks.addEventListener('change', () => {
+        const bookList = document.querySelector(`#book-list`);
+        if (hideBooks.checked) {
+            bookList.style.display = "none"
+
+        } else {
+            bookList.style.display = "initial"
+        }
+    })
+}
+
+hideBooks()
