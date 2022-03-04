@@ -30,28 +30,33 @@
 			</header>
 			<main>
 				<div id="library">
+					<div id="toggle-buttons">
+						<input type="checkbox" id="hide-books" />
+						<label for="hide-books">Hide Books</label>
+						<input type="checkbox" id="show-favorite" />
+						<label for="show-favorite">Show Favorite</label>
+					</div>
 					<ul id="book-list">
 						<h2>Book List</h2>
-						<li class="book book--style">
+						<li isFav="true" class="book book--style">
 							<span class="title">Loki</span>
 							<button class="remove button--style">remove</button>
 						</li>
-						<li class="book book--style">
+						<li isFav="false" class="book book--style">
 							<span class="title">Loki 2.0</span>
 							<button class="remove button--style">remove</button>
 						</li>
-						<li class="book book--style">
+						<li isFav="false" class="book book--style">
 							<span class="title">Loki 3.0</span>
 							<button class="remove button--style">remove</button>
 						</li>
-						<li class="book book--style">
+						<li isFav="false" class="book book--style">
 							<span class="title">Loki 4.0</span>
 							<button class="remove button--style">remove</button>
 						</li>
 					</ul>
 				</div>
-				<input type="checkbox" id="hide-books" />
-				<label for="hide-books">Hide Books</label>
+
 				<form id="add-books">
 					<input
 						id="titleInput"

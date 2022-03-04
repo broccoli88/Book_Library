@@ -1,8 +1,9 @@
 :root {
-	--color-deepPurple: #363237;
+	--color-deepPurple: hsl(288, 5%, 21%);
 	--color-Indigo: #081c3a;
 	--color-Taupe: #73605b;
 	--color-Blush: #d09683;
+	--color-favourite: hsl(180, 100%, 10%);
 }
 
 *,
@@ -86,17 +87,28 @@ header {
 /* BOOKS STYLE */
 
 .book {
-	padding: 0.7em 0.8em;
+	padding: 0.7em 0.8em 0.7em 1em;
 
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2rem;
 
 	position: relative;
-	z-index: 1;
 
 	transition: 0.3s;
 }
+
+/* .book::before {
+	content: url(../images/bookmark.svg);
+	display: inline-block;
+
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -0.5rem;
+	left: 0.5rem;
+	z-index: 2;
+} */
 
 .book--style {
 	border-radius: 20px;
@@ -112,6 +124,10 @@ header {
 	transform: translateY(-0.5rem);
 	border-color: #081c3a;
 	z-index: 10;
+}
+
+.book[isFav="true"] {
+	border-left: 15px solid var(--color-favourite);
 }
 
 /* BUTTONS STYLE */
@@ -163,4 +179,14 @@ header {
 #add-button:hover,
 #add-button:focus {
 	background-color: hsla(35, 50%, 60%, 0.8);
+}
+
+/* FAVOURITE */
+
+#toggle-buttons {
+	margin-bottom: 2rem;
+}
+
+#toggle-buttons > label {
+	margin-right: 2rem;
 }

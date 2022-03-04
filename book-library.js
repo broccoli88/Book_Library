@@ -1,8 +1,8 @@
+const bookList = document.querySelector(`#book-list`);
+
 // REMOVE
 
 function removeBook() {
-
-    const bookList = document.querySelector('#book-list');
 
     bookList.addEventListener('click', (e) => {
         if (e.target.className == 'remove button--style') {
@@ -19,7 +19,6 @@ removeBook()
 // ADD
 
 function addBook() {
-    const bookList = document.querySelector('#book-list');
     const addBar = document.forms['add-books'];
 
     addBar.addEventListener('submit', (e) => {
@@ -74,9 +73,8 @@ addBook()
 // SEARCHBAR
 
 function searchBar() {
-
     const searchBar = document.forms['book-search'].querySelector('input');
-    const bookList = document.querySelector('#book-list');
+
 
     searchBar.addEventListener('input', (e) => {
         const books = bookList.querySelectorAll('li')
@@ -101,17 +99,55 @@ searchBar()
 function hideBooks() {
     const hideBooks = document.querySelector('#hide-books');
 
-    console.log(hideBooks);
-
     hideBooks.addEventListener('change', () => {
-        const bookList = document.querySelector(`#book-list`);
+
         if (hideBooks.checked) {
             bookList.style.display = "none"
 
         } else {
-            bookList.style.display = "initial"
+            bookList.style.display = "inherit"
         }
     })
 }
 
 hideBooks()
+
+
+// FAVORITE BOOKS
+
+bookList.addEventListener('click', (e) => {
+    if (e.target.className == "book book--style") {
+        const isFav = e.target.getAttribute('isFav')
+        if (isFav == 'true') {
+            e.target.setAttribute('isFav', false)
+        }
+        else {
+            e.target.setAttribute('isFav', true)
+        }
+    }
+})
+
+
+// FAVORITE FILTER 
+
+function filterFavorite() {
+    const showFav = document.querySelector('#show-favorite');
+
+    showFav.addEventListener('change', () => {
+        books = bookList.querySelectorAll('li')
+        books.forEach((book) => {
+            const isFav = book.getAttribute('isFav')
+            if (showFav.checked && isFav != 'true') {
+                book.style.display = 'none'
+            }
+            else {
+                book.style.display = 'flex'
+            }
+        })
+    })
+}
+
+filterFavorite()
+
+
+
